@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Кулінарні рецепти</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/img/i.jpg" type="image/x-icon" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1><img src="/img/ico.png" alt="Mouse" style="height: 1em; vertical-align: middle;"> Мої рецепти</h1>
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Пошук..." />
+      <select id="sortSelect">
+        <option value="title">Сортувати за назвою</option>
+        <option value="time">Сортувати за часом</option>
+      </select>
+      <button id="addRecipeBtn">+ Додати рецепт</button>
+    </div>
+  </header>
+
+  <main id="recipeList"></main>
+
+  <div class="modal" id="recipeModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Новий рецепт</h2>
+      <form id="recipeForm">
+        <input type="text" id="title" placeholder="Назва" required />
+        <input type="text" id="time" placeholder="Час приготування (хв)" required />
+        <textarea id="ingredients" placeholder="Інгредієнти" required></textarea>
+        <textarea id="instructions" placeholder="Інструкції" required></textarea>
+        <input type="url" id="imageUrl" placeholder="Посилання на зображення" required />
+        <div class="form-buttons">
+          <button type="submit">Зберегти</button>
+          <button type="button" id="cancelBtn">Скасувати</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="confirmModal">
+    <div class="modal-content">
+      <p>Ви впевнені, що хочете видалити цей рецепт?</p>
+      <div class="form-buttons">
+        <button id="confirmDelete">Так</button>
+        <button id="cancelDelete">Ні</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

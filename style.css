@@ -1,0 +1,139 @@
+:root {
+  --bg: #fffaf4;
+  --card-bg: #fff;
+  --accent: #ffb347;
+  --accent-hover: #ffa033;
+  --accent-light: #ffe0b2;
+  --text-main: #333;
+  --text-light: #666;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: var(--text-main);
+}
+
+header {
+  background: var(--accent);
+  padding: 1em;
+  text-align: center;
+  color: white;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+  flex-wrap: wrap;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+  gap: 1.5em;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1em;
+  width: 280px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin: 0.5em 0 0.2em;
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.9em;
+}
+
+.card .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+
+textarea,
+input[type="text"],
+input[type="url"] {
+  width: 100%;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+.recipe-detail-card {
+  background: var(--card-bg);
+  padding: 2em;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+.recipe-detail-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1em;
+}
